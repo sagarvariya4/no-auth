@@ -1,6 +1,6 @@
 {
   "name": "@no-auth/next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Auth library for nextjs",
   "homepage": "https://github.com/Sagar-v4/no-auth/blob/master/packages/next/README.md",
   "repository": {
