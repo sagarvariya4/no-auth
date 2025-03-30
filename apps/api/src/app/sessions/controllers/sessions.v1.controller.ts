@@ -302,9 +302,9 @@ export class SessionsV1Controller {
             ...device.sessions[tokenCreateData.sso_uuid],
             jti: session_uuid,
             users: {
-              ...device.sessions[tokenCreateData.sso_uuid].users,
+              ...device.sessions?.[tokenCreateData.sso_uuid]?.users,
               [tokenCreateData.user_uuid]: {
-                ...device.sessions[tokenCreateData.sso_uuid].users[
+                ...device.sessions?.[tokenCreateData.sso_uuid]?.users[
                   tokenCreateData.user_uuid
                 ],
                 log_in_at: curr,

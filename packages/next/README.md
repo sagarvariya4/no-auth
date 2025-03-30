@@ -25,6 +25,8 @@ pnpm add @no-auth/next
 
 In your Next.js `middleware.ts`:
 
+Note: if you are using `src/` folder then you need to add this file at `src/middleware.ts` else it should be in the root of your project folder
+
 ```typescript
 import { noAuthMiddleware } from "@no-auth/next";
 import { NextResponse } from "next/server";
@@ -110,8 +112,7 @@ Wraps your application with authentication context using SWR.
 #### Returns
 
 - `user`: Current user data
-- `isLoading`: Boolean indicating data loading state
-- `error`: Any error during user data fetching
+- `isUserLoading`: Boolean indicating data loading state
 
 ## 🤝 Contributing
 
