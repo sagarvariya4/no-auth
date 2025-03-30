@@ -1,4 +1,4 @@
-import { Controller, Get, Logger, Req, Res } from "@nestjs/common";
+import { Controller, Get, Logger, Param, Req, Res } from "@nestjs/common";
 import { zodToOpenAPI } from "nestjs-zod";
 
 import {
@@ -7,7 +7,7 @@ import {
   insertOneDeviceOutput,
   InsertOneDeviceOutput,
 } from "@/lib/trpc/schemas/v1/devices";
-import { ApiResponse } from "@nestjs/swagger";
+import { ApiParam, ApiResponse } from "@nestjs/swagger";
 import { DevicesV1Service } from "@/app/devices/services/devices.v1.service";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { BasicService } from "@/app/basic/basic.service";
@@ -46,13 +46,17 @@ export class DevicesV1Controller {
     }
   }
 
-  @Get("users")
+  @Get("users/:sso_uuid")
   @ApiResponse({
     schema: zodToOpenAPI(findDeviceUsersOutput),
   })
+  @ApiParam({
+    name: "sso_uuid",
+    type: "string",
+  })
   async findDeviceUsers(
     @Req() req: FastifyRequest,
-    @Res({ passthrough: true }) res: FastifyReply,
+    @Param("sso_uuid") sso_uuid: string,
   ): Promise<FindDeviceUsersOutput> {
     try {
       this.logger.debug({
@@ -79,7 +83,7 @@ export class DevicesV1Controller {
       });
 
       if (device?.sessions) {
-        const sso_users_obj = device.sessions?.[token.sso];
+        const sso_users_obj = device.sessions?.[sso_uuid];
 
         if (sso_users_obj) {
           const sso_users = sso_users_obj.users;

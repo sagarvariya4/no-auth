@@ -9,9 +9,9 @@ import {
 import { fetcher } from "@/swr/server";
 import { env } from "@/env/client/env.schema";
 
-export function useDeviceUsers() {
+export function useDeviceUsers(sso_uuid: string) {
   return useSWR<FindDeviceUsersOutput>(
-    `${env.APP_BASE_URL}/api/v1/devices/users`,
+    `${env.APP_BASE_URL}/api/v1/devices/users/${sso_uuid}`,
     (url) =>
       fetcher(url, {
         method: "GET",

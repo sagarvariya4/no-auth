@@ -23,7 +23,7 @@ import { getShortName } from "@/utils/short-name";
 export function SSOLoggedIn() {
   const { sso_uuid } = useParams<{ sso_uuid: string }>();
 
-  const { data, isLoading, error } = useDeviceUsers();
+  const { data, isLoading, error } = useDeviceUsers(sso_uuid);
 
   const { trigger, isMutating } = useLoginMutation();
 
