@@ -2,7 +2,36 @@
 
 Every application needs Authentication and at some point Authorization, implementing this in each project can be tedious and time consuming. `No Auth` solves this problem for you so, you can focus on other important tasks.
 
-### How to use?
+### Features
+
+- Single Sign On(SSO)
+- Switch instantly in between loggedin accounts(Multi Tenancy)
+- Multi step form for signups, created by drag and drop input components (Next version)
+- One time password, Magic link etc via email and whatsapp (Whatsapp next version)
+- Create new roles and permissions and authorize your users according to that (Next version)
+- Create your own email app for your users communication (Next version)
+- Create Templates for messages (Next version)
+
+### Note:
+
+- Its available for nextjs only (https://www.npmjs.com/package/@no-auth/next)
+- Its not production ready but you can try it locally
+
+## How to use?
+
+### Steps to get started (Videos)
+
+[1. Local setup](https://drive.google.com/file/d/1qb8CyZUUwR_TJK_a_jhM_oAoWbdSHFRT/view)
+
+[2. Build and run](https://drive.google.com/file/d/1Ssq7f3jh3V82DwMey5KJ8uAeVkJgqCsi/view)
+
+[3. Create your organization account and sso](https://drive.google.com/file/d/1YKEAi79t1CSyIwptE4DxizVjHd-8l5b1/view)
+
+[4. Install No-Auth and middleware](https://drive.google.com/file/d/1zl7uDf-6ALWRMVzLAWSewuIkIcoWA7Uu/view)
+
+[5 User login-signup then redirection and get user data](https://drive.google.com/file/d/1KGE0HkGfITwMjGHiScuyL-v3X9FEpLBC/view)
+
+### Steps
 
 - Clone the repo
 - Add env variables, refer env.example
@@ -16,16 +45,6 @@ Every application needs Authentication and at some point Authorization, implemen
 - There is SSO_URL in the frontend env, you can redirect users to that link for login or sign ups, on every new signups system will send user generater `{uuid, email}` to the webhook link(your backend).
 - No auth is not managing users yet, so you need to manually store user into your system and all done.
 - here 3000 post is used for nextjs frontend and 3001 used for nestjs backend. changing this will need update env as well.
-
-### Features
-
-- Single Sign On(SSO)
-- Switch instantly in between loggedin accounts(Multi Tenancy)
-- Multi step form for signups, created by drag and drop input components (Next version)
-- One time password, Magic link etc via email and whatsapp (Whatsapp next version)
-- Create new roles and permissions and authorize your users according to that (Next version)
-- Create your own email app for your users communication (Next version)
-- Create Templates for messages (Next version)
 
 ## Technologies
 
@@ -75,6 +94,7 @@ Every application needs Authentication and at some point Authorization, implemen
       - @generated
       - schemas
   - packages
+    - @no-auth/next
     - eslint-config
     - typescript-config
     - ui

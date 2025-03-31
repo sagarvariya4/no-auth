@@ -26,9 +26,8 @@ async function bootstrap() {
     algorithm: "SHA256",
     parseOptions: {}, // options for parsing cookies
   });
-  // app.enableCors();
   app.enableCors({
-    origin: "http://localhost:3000", // Replace with your Next.js URL
+    origin: true, // Replace with your Next.js URL
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     credentials: true, // If you need to send cookies
     allowedHeaders: "Content-Type, Authorization",
