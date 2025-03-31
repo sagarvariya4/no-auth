@@ -350,7 +350,7 @@ export class SessionsV1Controller {
         priority: "high",
         secure: true,
         sameSite: true,
-        path: `/sso/v1/${tokenCreateData.sso_uuid}`,
+        path: "/",
       });
 
       const data = {

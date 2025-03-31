@@ -86,10 +86,9 @@ In any component:
 import { useUser } from '@no-auth/next';
 
 function ProfilePage() {
-  const { user, isLoading, error } = useUser();
+  const { user, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading user</div>;
 
   return <div>Welcome, {user.name}!</div>;
 }
