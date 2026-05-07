@@ -20,16 +20,17 @@ Every application needs Authentication and at some point Authorization, implemen
 ## How to use?
 
 ### Steps to get started (Videos)
+#### [Availabe in videos folder](https://github.com/sagarvariya4/no-auth/tree/master/videos)
 
-[1. Local setup](https://drive.google.com/file/d/1qb8CyZUUwR_TJK_a_jhM_oAoWbdSHFRT/view)
+1. Local setup
 
-[2. Build and run](https://drive.google.com/file/d/1Ssq7f3jh3V82DwMey5KJ8uAeVkJgqCsi/view)
+2. Build and run
 
-[3. Create your organization account and sso](https://drive.google.com/file/d/1YKEAi79t1CSyIwptE4DxizVjHd-8l5b1/view)
+3. Create your organization account and sso
 
-[4. Install No-Auth and middleware](https://drive.google.com/file/d/1zl7uDf-6ALWRMVzLAWSewuIkIcoWA7Uu/view)
+4. Install No-Auth and middleware
 
-[5 User login-signup then redirection and get user data](https://drive.google.com/file/d/1KGE0HkGfITwMjGHiScuyL-v3X9FEpLBC/view)
+5. User login-signup then redirection and get user data
 
 ### Steps
 
